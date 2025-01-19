@@ -1,0 +1,647 @@
+/* General Styles */
+html,body {
+    background-image:url("/static/images/back.jpg");
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    overflow-x: hidden;
+}
+
+header {
+    
+    background-color: #6e1704;
+    color: white;
+    padding: 20px 50px;
+    text-align:center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #3498db;
+}
+
+
+
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none; /* Hide by default */
+    background: none;
+    border: none;
+    color:white;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px; /* Position on the right side */
+    top: 20px;;
+    transform: translateY(-50%);
+  }
+  
+  .hamburger-icon {
+    font-size: 25px; /* Size of the three dashes */
+    font-weight: 300; /* Use a lighter font weight to make dashes less thick */
+  border-radius: 2px; /* Add rounded edges to the dashes */
+  padding: 0 2px; 
+}
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block; /* Show hamburger menu on smaller screens */
+    }
+  
+    .nav-links {
+      display: none; /* Hide nav links by default on smaller screens */
+      flex-direction: column;
+      width: 100%;
+      background-color: #6e1704;
+      position: absolute;
+      top: 70px; /* Adjust based on header height */
+      left: 0;
+    }
+  
+    .nav-links.active {
+      display: flex; /* Show nav links when active */
+    }
+  
+    .nav-links ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .nav-links ul li {
+      margin: 10px 0;
+    }
+  }
+
+
+
+
+
+
+main {
+  flex: 1;
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    padding: 40px 0;
+}
+
+h2 {
+    font-size: 32px;
+    color: #6e1704;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Products Page Styles */
+/* Center the "Our Products" title */
+#products h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #6e1704;
+    margin-bottom: 20px;
+  }
+  
+  /* Product List Layout */
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between cards */
+  }
+  
+  /* Product Card Styles */
+  .product-card {
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 500px;; /* Fixed width for cards */
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    touch-action:auto;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .product-card h3 {
+    font-size: 24px;
+    color: #6e1704;
+    margin-bottom: 10px;
+  }
+  
+  .product-card p {
+    font-size: 16px;
+    color: #555;
+  }
+  /* explore card*/
+  .product-card a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #6e1704;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .product-card a:hover {
+    background-color: #3498db;
+  }
+  
+  /* Responsive Layout for Small Screens */
+  @media (max-width: 1200px) {
+    .product-card {
+      width: calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .product-card {
+      width: calc(100% - 20px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .product-card {
+      width: 100%;
+      margin: 10px 0;
+    }
+  }
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #6e1704;
+    color: white;
+    width: 100%;
+}
+/* Breadcrumb Navigation Styles */
+.breadcrumb {
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .breadcrumb a {
+    color: #6e1704;
+    text-decoration: none;
+  }
+  
+  .breadcrumb a:hover {
+    text-decoration: underline;
+  }
+  
+  .breadcrumb span {
+    color: #999;
+  }
+  .contact-info a {
+    color: #0bdef1; /* Primary color */
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .contact-info a:hover {
+    color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.2); /* Enlarge on hover */
+  }
+
+
+
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+    header {
+      padding: 15px;
+    }
+    header .logo h1 {
+      font-size: 24px;
+    }
+  
+    nav {
+      padding: 5px;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav li {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    main {
+      padding: 10px;
+    }
+  
+    section {
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  
+    h2 {
+      font-size: 18px;
+    }
+  
+    p {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Adjust styles for even smaller screens */
+    header {
+      padding: 5px;
+    }
+  
+    nav {
+      padding: 2px;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav li {
+      margin-right: 0;
+      margin-bottom: 5px;
+    }
+  
+    main {
+      padding: 5px;
+    }
+  
+    section {
+      padding: 5px;
+      margin-bottom: 5px;
+    }
+  
+    h2 {
+      font-size: 14px;
+    }
+  
+    p {
+      font-size: 14px;
+    }
+    footer{
+      padding: 5px;
+      font-size: 12px;
+    }
+  }
+
+
+  
+@media (max-width: 320px) {
+  /* Adjust styles for very small screens */
+  header {
+    padding: 2px;
+  }
+
+  nav {
+    padding: 1px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    margin-right: 0;
+    margin-bottom: 2px;
+  }
+
+  main {
+    padding: 2px;
+  }
+
+  section {
+    padding: 2px;
+    margin-bottom: 2px;
+  }
+
+  h2 {
+    font-size: 12px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+  footer{
+    padding: 2px;
+    font-size: 10px;
+  }
+}
+
+
+
+
+
+
+
+
+h4{
+  text-align: center;
+}
+h3{
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+.tab {
+  flex: 0 0 100%;
+  max-width: 350px;
+  margin:0 auto;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.tab h3 {
+  font-size: 24px;
+  color: #6e1704;
+  margin-bottom: 10px;
+}
+
+.tab p {
+  font-size: 16px;
+
+  color: #555;
+}
+
+.tab a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #6e1704;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.tab a:hover {
+  background-color: #3498db;
+}
+
+
+
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+ 
+  footer{
+    padding: auto;
+    font-size: 14px;
+  }
+
+
+}
+
+/* Fix tab size for smaller screens of 320px */
+
+
+
+
+@media (max-width: 320px) {
+  .tab {
+    flex: 0 0 25%; /* Make the tab width even smaller */
+    max-width: 75px; /* Further reduce max width */
+    padding: 25px; /* Smaller padding */
+    height: 5000x; /* Adjust height based on content */
+  }
+
+  .tab h3 {
+    font-size: 14px; /* Smaller title font size */
+  }
+
+  .tab p {
+    font-size: 12px; /* Smaller text font size */
+  }
+
+  .tab a {
+    padding: 5px 10px; /* Smaller button size */
+    font-size: 12px; /* Smaller button font */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.form-group button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #6e1704; /* Same as Explore button */
+  color: white; /* Same as Explore button */
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+/* Hover effect for the Submit button */
+.form-group button:hover {
+  background-color: #3498db; /* Same as Explore button hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Inquiry Form Styles */
+#inquiry-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex-direction: column;
+  display: flex; /* Use Flexbox to center the box */
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+}
+
+#inquiry-form h2 {
+  text-align: center;
+  color: #6e1704;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;}
+.form-group button:hover {
+    background-color: #3498db;
+  }
+
+
+
+
+  .g-recaptcha iframe {
+    margin: 0 auto;
+    display: block;
+  }
+
+
+
+  /* .g-recaptcha {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(.85);
+    transform-origin: 0 0;
+    margin: 0 auto;
+  }
+  
+  @media (max-width: 768px) {
+    .g-recaptcha {
+      transform: scale(.85);
+      transform-origin: 0 0;
+    }
+  }
+   */
+
+
+
+
+
+
+
+
+
+
+
+.imgs{
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

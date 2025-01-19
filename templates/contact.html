@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> 
+  <title>Contact - Shreeji Sales Corporation</title>
+  <link rel="stylesheet" href="../static/css/design.css">
+  <script src="../static/js/webscript.js"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/design.css') }}">
+  <script src="{{ url_for('static', filename='js/webscript.js') }}"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+          <div class="logo">
+            <h1>Shreeji Sales Corporation</h1>
+          </div>
+          <div class="hamburger" aria-label="Toggle navigation">
+            <div class="hamburger-icon">&#9776;</div> <!-- Three horizontal dashes -->
+          </div>
+        </div>
+        <nav class="nav-links">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../products.html">Products</a></li>
+            <li><a href="../about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> &gt;&gt; <span>Contact</span>
+  </div>
+
+  <main>
+    
+
+      
+
+    <section id="inquiry-form">
+        <h2>Inquiry Form</h2>
+        <div class="tab1">
+          <form id="inquiryForm" action="{{ url_for('send_inquiry') }}" method="POST">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <textarea id="name" name="name" rows="1" cols="25" required></textarea>
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <textarea id="email" name="email" rows="1" cols="25" required></textarea>
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="phone">Phone:</label>
+              <textarea id="phone" name="phone" rows="1" cols="25" required></textarea>
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="city">City:</label>
+              <textarea id="city" name="city" rows="1" cols="25" required></textarea>
+            </div>
+            <br>
+            <div class="form-group">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <div class="dropdown" id="dropdown">
+                <span class="dropdown-label" id="dropdownLabel">Select Products</span>
+                <div class="dropdown-content">
+                  <label><input type="checkbox" name="product[]" value="Alternate Plywood"> Alternate Plywood</label>
+                  <label><input type="checkbox" name="product[]" value="Commercial Plywood"> Commercial Plywood</label>
+                  <label><input type="checkbox" name="product[]" value="Packing Grade Plywood"> Packing Grade Plywood</label>
+                  <label><input type="checkbox" name="product[]" value="MR Grade Plywood"> MR Grade Plywood</label>
+                  <label><input type="checkbox" name="product[]" value="Blockboard & Flushdoor">Blockboard & Flushdoor</label>
+                  <label><input type="checkbox" name="product[]" value="MDF">MDF</label>
+                  <label><input type="checkbox" name="product[]" value="Laminate & Timber">Laminate & Timber</label>
+                </div>
+                </div>
+              <!-- <label for="product">Product of Interest:</label>
+              <select id="product" name="product[]" multiple required>
+               
+                <option value="Alternate Plywood">Alternate Plywood</option>
+                <option value="Commercial Plywood">Commercial Plywood</option>
+                <option value="Packing Grade Plywood">Packing Grade Plywood</option>
+                <option value="MR Grade Plywood">MR Grade Plywood</option>
+                <option value="Blockboard & Flushdoor">Blockboard & Flushdoor</option>
+              </select> -->
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" rows="6" cols="30" required></textarea>
+            </div>
+            <br>
+            
+            <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
+            <div class="form-group">
+              <div class="g-recaptcha" data-sitekey="6LcTZ7MqAAAAAC2_pjyVFdXQhLTzzVkBrmtQqZ5F">
+                data-size="compact">
+              </div>
+              <br>
+            </div>
+            <div class="form-group">
+              <button type="submit">Submit Inquiry</button>
+            </div>
+            <!-- Placeholder for success/error messages -->
+            <div id="responseMessage" style="margin-top: 20px; color: green;"></div>
+          </form>
+        </div>
+      
+
+
+
+
+
+
+
+
+
+
+      <h2>Contact Us</h2>
+      <p>We'd love to hear from you! Reach out to us for any inquiries or assistance.</p>
+      <div class="contact-info">
+        <p><strong>Email:</strong> <a href="mailto:info.shreejisalescorporation@gmail.com">info.shreejisalescorporation@gmail.com</a></p>
+        <p><strong>Phone:</strong><a href="tel:+919427020838">+919427020838</a></p>
+        <p><strong>Address:</strong>2,Popular Estate near Aslali police station,Aslali,
+        Ahmedabad,Gujarat-380061</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Shreeji Sales Corporation. All Rights Reserved.</p>
+  </footer>
+
+
+
+
+
+
+
+
+  <script>
+    document.getElementById("inquiryForm").addEventListener("submit", function (e) {
+        e.preventDefault(); // Prevent form from refreshing the page
+
+        const formData = new FormData(e.target);
+        const responseMessage = document.getElementById("responseMessage");
+
+        fetch("/send_inquiry", {
+            method: "POST",
+            body: formData,
+        })
+            .then((response) => {
+            if (!response.ok) {
+                // If the response is not OK, throw an error to be caught below
+                throw new Error("Failed to submit the inquiry. Please try again.");
+            }
+            return response.json();
+        })
+            
+            .then((data) => {
+                if (data.status === "success") {
+                    responseMessage.textContent = data.message;
+                    responseMessage.style.color = "green";
+
+                    // responseMessage.className = "message success";
+
+                    // Clear the form
+                    e.target.reset();
+                } else {
+                    responseMessage.textContent = `Error: ${data.message}`;
+                    responseMessage.style.color = "red";
+                    // responseMessage.className = "message error";
+                }
+            })
+            .catch((error) => {
+                responseMessage.textContent = `Error: ${error.message}`;
+                responseMessage.style.color = "red";
+                // responseMessage.className = "message error";
+            });
+    });
+
+
+
+
+
+
+
+
+
+
+    const dropdown = document.getElementById('dropdown');
+    const dropdownLabel = document.getElementById('dropdownLabel');
+    const checkboxes = dropdown.querySelectorAll('input[type="checkbox"]');
+
+    // Toggle dropdown on click
+    dropdownLabel.addEventListener('click', () => {
+      dropdown.classList.toggle('open');
+    });
+
+    // Update label with selected products
+    checkboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', () => {
+        const selected = Array.from(checkboxes)
+          .filter(cb => cb.checked)
+          .map(cb => cb.parentElement.textContent.trim());
+
+        dropdownLabel.textContent = selected.length > 0 ? selected.join(', ') : 'Select Products';
+      });
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove('open');
+      }
+    });
+
+
+
+
+
+
+
+
+
+  </script>
+
+
+
+  <!-- <script>
+    document.getElementById('inquiryForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission to wait for the reCAPTCHA response
+
+      grecaptcha.ready(function() {
+        grecaptcha.execute('6LdV8bEqAAAAACD67_NXrZwDN6cNLNegxRcuWf09', {action: 'submit'}).then(function(token) {
+          // Add the token to the hidden input field
+          document.getElementById('g-recaptcha-response').value = token;
+          // Submit the form after adding the token
+          document.getElementById('inquiryForm').submit();
+        });
+      });
+    });
+  </script> -->
+
+
+
+
+
+
+  <style>
+    .tab1 {
+  margin: 0 auto;
+  max-width: 500px; /* adjust the width as needed */
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+@media (max-width: 768px) {
+  .tab1 {
+    margin: 0 auto;
+    max-width:auto;
+    padding: 5px;
+  }
+}
+  
+
+
+
+
+
+
+.dropdown {
+      position: relative;
+      display: inline-block;
+      width: 250px;
+    }
+
+    .dropdown-label {
+      display: block;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      cursor: pointer;
+      text-align: left;
+    }
+    .dropdown-label::after {
+      content: '\25BC'; /* Unicode for down arrow */
+      font-size: 12px;
+      margin-left: 100px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+
+    .dropdown label {
+      display: flex; /* Use flexbox for alignment */
+      align-items: center; /* Align text and checkbox vertically */
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    .dropdown label:hover {
+      background-color: #f1f1f1;
+    }
+
+    .dropdown input[type="checkbox"] {
+      margin-right: 10px; /* Space between checkbox and text */
+    }
+
+    .dropdown.open .dropdown-content {
+      display: block;
+    }
+
+  </style>
+
+
+
+
+
+
+
+
+
+
+  
+</body>
+</html>
+
+
+
+
+
+
