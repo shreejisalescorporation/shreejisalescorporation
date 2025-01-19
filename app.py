@@ -62,7 +62,7 @@ def send_inquiry():
     # Your email details
     sender_email =os.getenv("email")  # Replace with your email
     sender_password =os.getenv("emailpass")  # Replace with your email password
-    receiver_email ="info.shreejisalescorporation@gmail.com"  # Replace with the receiver's email
+    receiver_email =os.getenv("email")  # Replace with the receiver's email
 
     subject = "New Inquiry from Website"
     email_body = f"""
