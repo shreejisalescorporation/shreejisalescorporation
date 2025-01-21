@@ -173,6 +173,7 @@
         fetch("https://api.shreejisalescorp.in/send_inquiry", {
             method: "POST",
             body: formData,
+            credentials: "include",
         })
             .then((response) => {
             if (!response.ok) {
