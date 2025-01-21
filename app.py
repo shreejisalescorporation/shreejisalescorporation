@@ -11,7 +11,7 @@ load_dotenv()
 
 
 app = Flask(__name__, template_folder='templates', static_folder='static')  # Contact.html is in website directorystatic_folder='website')
-CORS(app, resources={r"/*": {"origins":"https://shreejisalescorp.in"}})
+CORS(app, origins=["https://shreejisalescorp.in"])
 
 
 @app.route('/')
