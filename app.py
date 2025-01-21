@@ -138,6 +138,12 @@ def send_inquiry():
         return jsonify({"status": "success", "message": "Inquiry sent successfully!"})
     except Exception as e:
         return jsonify({"status": "error", "message": str(e)})
-
+@app.after_request
+def add_cors_headers(response):
+    response.headers["Access-Control-Allow-Origin"] = "https://shreejisalescorp.in"
+    response.headers["Access-Control-Allow-Methods"] = "POST, GET, OPTIONS, DELETE, PUT"
+    response.headers["Access-Control-Allow-Headers"] = "Content-Type, Authorization"
+    response.headers["Access-Control-Allow-Credentials"] = "true"
+    return response
 if __name__ == '__main__':
     app.run() 
