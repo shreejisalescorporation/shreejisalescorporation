@@ -170,7 +170,7 @@
         const formData = new FormData(e.target);
         const responseMessage = document.getElementById("responseMessage");
 
-        fetch("/send_inquiry", {
+        fetch("https://api.shreejisalescorp.in/send_inquiry", {
             method: "POST",
             body: formData,
         })
