@@ -11,7 +11,24 @@ load_dotenv()
 
 
 app = Flask(__name__, template_folder='templates', static_folder='static')  # Contact.html is in website directorystatic_folder='website')
-CORS(app, origins=["https://shreejisalescorp.in"])
+@app.after_request
+def add_cors_headers(response):
+    # Define the allowed origins
+    allowed_origins = ["https://shreejisalescorp.in", "https://api.shreejisalescorp.in"]
+    
+    # Get the Origin header from the incoming request
+    origin = request.headers.get('Origin')
+    
+    # If the origin is in the allowed list, set the CORS header
+    if origin in allowed_origins:
+        response.headers["Access-Control-Allow-Origin"] = origin
+    
+    # Add other CORS-related headers
+    response.headers["Access-Control-Allow-Methods"] = "POST, GET, OPTIONS, DELETE, PUT"
+    response.headers["Access-Control-Allow-Headers"] = "Content-Type, Authorization"
+    response.headers["Access-Control-Allow-Credentials"] = "true"
+    
+    return response
 
 
 @app.route('/')
@@ -138,12 +155,6 @@ def send_inquiry():
         return jsonify({"status": "success", "message": "Inquiry sent successfully!"})
     except Exception as e:
         return jsonify({"status": "error", "message": str(e)})
-@app.after_request
-def add_cors_headers(response):
-    response.headers["Access-Control-Allow-Origin"] = "https://shreejisalescorp.in"
-    response.headers["Access-Control-Allow-Methods"] = "POST, GET, OPTIONS, DELETE, PUT"
-    response.headers["Access-Control-Allow-Headers"] = "Content-Type, Authorization"
-    response.headers["Access-Control-Allow-Credentials"] = "true"
-    return response
+
 if __name__ == '__main__':
     app.run() 
