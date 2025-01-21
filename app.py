@@ -1,4 +1,5 @@
 from flask import Flask,request,render_template,jsonify
+from flask_cors import CORS
 import smtplib
 import os
 from dotenv import load_dotenv
@@ -10,6 +11,7 @@ load_dotenv()
 
 
 app = Flask(__name__, template_folder='templates', static_folder='static')  # Contact.html is in website directorystatic_folder='website')
+CORS(app, resources={r"/*": {"origins":"https://shreejisalescorp.in"}})
 
 
 @app.route('/')
