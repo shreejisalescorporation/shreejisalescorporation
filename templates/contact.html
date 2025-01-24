@@ -47,6 +47,7 @@
 
     <section id="inquiry-form">
         <h2>Inquiry Form</h2>
+        <div class="container">
         <div class="tab1">
           <form id="inquiryForm" action="https://api.shreejisalescorp.in/send_inquiry" method="POST">
             <div class="form-group">
@@ -140,7 +141,7 @@
 
 
 
-
+        </div>
       <h2>Contact Us</h2>
       <p>We'd love to hear from you! Reach out to us for any inquiries or assistance.</p>
       <div class="contact-info">
@@ -274,21 +275,32 @@
 
 
   <style>
+   .g-recaptcha {
+  transform: scale(0.9); /* Reduces size to 80% */
+  transform-origin: center; /* Keeps it centered */
+}
+    .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 15vh; /* Full height of the viewport */
+  margin: 0; /* Remove default body margin */
+}
     .tab1 {
-  margin: 0 auto;
+  
   max-width: 500px; /* adjust the width as needed */
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 10px;
-  padding: 20px;
+  padding: 2px;
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 @media (max-width: 768px) {
   .tab1 {
-    margin: 0 auto;
-    max-width:auto;
-    padding: 5px;
+    
+    max-width:275px;
+    padding:5px;
   }
 }
   
