@@ -220,7 +220,88 @@ p {
       margin: 10px 0;
     }
   }
+    .quick-links {
+      font-family: Arial, sans-serif;
+    }
 
+    .quick-links hr {
+      border: none;
+      border-top: 2px solid #f0e4d6;
+      /* Adjust line thickness and color */
+      margin: 10px auto;
+      width: 80%;
+      /* Adjust width as needed */
+    }
+
+    .quick-links h3 {
+      color: #f0e4d6;
+      /* Header text color */
+    }
+
+    .quick-links a {
+      color: #f0e4d6;
+      /* Link text color */
+      text-decoration: none;
+      margin-right: 10px;
+    }
+
+    .quick-links a:hover {
+      color: #f0e4d6;
+      /* Hover color */
+    }
+
+    .map-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 97%;
+      min-height: 10vh;
+      padding: 5px;
+      box-sizing: border-box;
+    }
+
+    .google-map {
+      position: relative;
+      width: 97%;
+      max-width: 800px;
+      padding-top: 28%;
+      margin: 0 auto;
+      box-sizing: border-box;
+
+    }
+
+    .google-map iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 110%;
+      border: 0;
+
+    }
+
+    /* Styling for contact icons */
+    .contact-icons {
+      margin-top: 20px;
+    }
+
+    .contact-icons a {
+      margin: 0 15px;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .contact-icons i {
+      color: #f0e4d6;
+      font-size: 20px;
+      /* Adjust size of icons */
+      transition: transform 0.3s ease;
+    }
+
+    .contact-icons i:hover {
+      transform: scale(1.1);
+      /* Icon hover effect */
+    }
 /* Footer Styles */
 footer {
     text-align: center;
