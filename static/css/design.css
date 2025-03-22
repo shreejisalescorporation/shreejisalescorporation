@@ -160,7 +160,7 @@ p {
   /* Product Card Styles */
   .product-card {
     margin: 0 auto;
-    background-color: #f9f9f9;
+    background-color: #dcbf9e;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
@@ -498,7 +498,7 @@ h3{
   flex: 0 0 100%;
   max-width: 350px;
   margin:0 auto;
-  background-color: #f9f9f9;
+  background-color: #dcbf9e;
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 20px;
