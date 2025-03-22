@@ -1,6 +1,6 @@
 /* General Styles */
 html,body {
-    background-image:url("/static/images/main.JPG") ;
+    background-image:url("/static/images/main.jpg") ;
     background-repeat: no-repeat;      /* Prevents the image from repeating */
     background-size: cover;            /* Scales the image to cover the container */
     background-position: center; 
