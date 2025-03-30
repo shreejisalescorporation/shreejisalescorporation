@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+		<!--	created with www.mysitemapgenerator.com	-->
+		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<url>
+	<loc>https://shreejisalescorp.in/</loc>
+	<lastmod>2025-03-30T09:15:37+01:00</lastmod>
+	<priority>1.0</priority>
+	<image:image>
+			<image:loc>https://shreejisalescorp.in/static/images/eu.jpg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://shreejisalescorp.in/static/images/pack.jpg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://shreejisalescorp.in/static/images/eu1.jpg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://shreejisalescorp.in/static/images/horizon1.jpg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://shreejisalescorp.in/static/images/zircon.jpg</image:loc>
+	</image:image>
+</url>
+<url>
+	<loc>https://shreejisalescorp.in/products</loc>
+	<lastmod>2025-03-30T09:15:37+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://shreejisalescorp.in/about</loc>
+	<lastmod>2025-03-30T09:15:37+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://shreejisalescorp.in/templates/contact</loc>
+	<lastmod>2025-03-30T09:15:37+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://shreejisalescorp.in/alt</loc>
+	<lastmod>2025-03-30T09:15:37+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://shreejisalescorp.in/mr</loc>
+	<lastmod>2025-03-30T09:15:37+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://shreejisalescorp.in/comm</loc>
+	<lastmod>2025-03-30T09:15:37+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://shreejisalescorp.in/pack</loc>
+	<lastmod>2025-03-30T09:15:37+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://shreejisalescorp.in/bb</loc>
+	<lastmod>2025-03-30T09:15:37+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://shreejisalescorp.in/plywood</loc>
+	<lastmod>2025-03-30T09:15:37+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://shreejisalescorp.in/mdf</loc>
+	<lastmod>2025-03-30T09:15:37+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://shreejisalescorp.in/timnlam</loc>
+	<lastmod>2025-03-30T09:15:37+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+</urlset>
