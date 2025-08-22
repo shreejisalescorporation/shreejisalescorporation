@@ -1,6 +1,6 @@
 /* General Styles */
 html,body {
-    background-image:url("/static/images/main.jpg") ;
+    background-image:url("/static/images/main.avif") ;
     background-repeat: no-repeat;      /* Prevents the image from repeating */
     background-size: cover;            /* Scales the image to cover the container */
     background-position: center; 
@@ -729,3 +729,4 @@ h3{
   height: auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
